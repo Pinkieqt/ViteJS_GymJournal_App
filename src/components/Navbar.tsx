@@ -15,7 +15,7 @@ import AddModal from "./AddModal";
 function Navbar() {
   const isMobile = useMediaQuery({ query: "(max-device-width: 1024px)" });
   const [activeLink, setActiveLink] = useState<string>(
-    useLocation().pathname === "" ? "dashboard" : useLocation().pathname.substring(1)
+    useLocation().pathname === "/" ? "dashboard" : useLocation().pathname.substring(1)
   );
 
   return (
