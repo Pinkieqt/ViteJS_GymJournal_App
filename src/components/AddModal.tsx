@@ -30,8 +30,6 @@ function AddModal() {
     { key: "Dejvo", value: false },
   ]);
 
-  const [selItems, setItemss] = useState([{ Dudu: false, Luke: false, Tom: false, Dejvo: false }]);
-
   return (
     <>
       {/* Button */}
@@ -53,16 +51,23 @@ function AddModal() {
           <ModalCloseButton />
           <ModalBody>
             <SimpleGrid columns={2} spacing={3}>
-              {/* {selectedItems.map((item) => (
-                <Button variant="outline" w="full" key={item.key} onClick={selItems.dudu}>
-                  {item.key}
-                </Button>
-              ))} */}
-              {/* {selItems.map((item) => (
-                <Button variant="outline" w="full" key={item.key} onClick={selItems.dudu}>
-                  {item.key}
-                </Button>
-              ))} */}
+              {selectedItems.map((item) => {
+                console.log(item);
+                return (
+                  <Button
+                    variant={item.value === true ? "solid" : "outline"}
+                    colorScheme={item.value === true ? "green" : "red"}
+                    w="full"
+                    key={item.key}
+                    onClick={() => {
+                      item.value = !item.value;
+                      setItems([...selectedItems]);
+                    }}
+                  >
+                    {item.key}
+                  </Button>
+                );
+              })}
             </SimpleGrid>
           </ModalBody>
 

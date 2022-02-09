@@ -30,18 +30,7 @@ function LatestArrivalsModal() {
           <ModalHeader>Manage arrivals</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <SimpleGrid columns={2} spacing={3}>
-              {/* {selectedItems.map((item) => (
-                <Button variant="outline" w="full" key={item.key} onClick={selItems.dudu}>
-                  {item.key}
-                </Button>
-              ))} */}
-              {/* {selItems.map((item) => (
-                <Button variant="outline" w="full" key={item.key} onClick={selItems.dudu}>
-                  {item.key}
-                </Button>
-              ))} */}
-            </SimpleGrid>
+            <SimpleGrid columns={2} spacing={3}></SimpleGrid>
           </ModalBody>
 
           <ModalFooter>
